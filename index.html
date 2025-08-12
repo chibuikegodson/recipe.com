@@ -8,7 +8,29 @@
 </head>
 <body>
     <!-- Header -->
-    <header></header>
+    <header>
+        <nav class="white">
+            <div class="container">
+                <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
+                <a class=" sidenav-trigger orange-text text-darken-4 right" href="#mobile">Menu</a>
+                <ul class="right hide-on-small-only   ">
+                    <li><a class="orange-text text-darken-4" href=""><strong>Home</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href=""><strong>Cakes</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href=""><strong>Soup</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href=""><strong>Chicken</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href=""><strong>Customers</strong></a></li>
+                </ul>
+            </div>
+            <ul id="mobile" class="sidenav orange darken-4">
+                <li><a class="white-text text-darken-4" href=""><strong>Home</strong></a></li>
+                <li><a class="white-text text-darken-4" href=""><strong>Cakes</strong></a></li>
+                <li><a class="white-text text-darken-4" href=""><strong>Soup</strong></a></li>
+                <li><a class="white-text text-darken-4" href=""><strong>Chicken</strong></a></li>
+                <li><a class="white-text text-darken-4" href=""><strong>Customers</strong></a></li>
+            </ul>
+
+        </nav>
+    </header>
     <main>
         <!-- home -->
         <!-- Customer comments -->
@@ -23,7 +45,7 @@
 <script src="js/materialize.js"></script>
 <script>
     $(document).ready(function(){
-
+        $('.sidenav').sidenav();
     })
 </script>
 </html>
