@@ -13,7 +13,7 @@
             <div class="container">
                 <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
                 <a class=" sidenav-trigger orange-text text-darken-4 right" href="#mobile">Menu</a>
-                <ul class="right hide-on-small-only   ">
+                <ul class="right hide-on-small-only">
                     <li><a class="orange-text text-darken-4" href=""><strong>Home</strong></a></li>
                     <li><a class="orange-text text-darken-4" href=""><strong>Cakes</strong></a></li>
                     <li><a class="orange-text text-darken-4" href=""><strong>Soup</strong></a></li>
@@ -28,8 +28,16 @@
                 <li><a class="white-text text-darken-4" href=""><strong>Chicken</strong></a></li>
                 <li><a class="white-text text-darken-4" href=""><strong>Customers</strong></a></li>
             </ul>
-
         </nav>
+        <div class="slider">
+            <ul class="slides">
+                <li><img class="responsive-img" src="img/cake_fruit.jpg" alt=""></li>
+                <li><img class="responsive-img" src="img/shrimp_soup.jpg" alt=""></li>
+                <li><img class="responsive-img" src="img/chicken_3.jpg" alt=""></li>
+                <li><img class="responsive-img" src="img/dessert_chocolate.jpg" alt=""></li>
+                <li><img class="responsive-img" src="img/ginger_cake.webp" alt=""></li>
+            </ul>
+        </div>
     </header>
     <main>
         <!-- home -->
@@ -46,6 +54,9 @@
 <script>
     $(document).ready(function(){
         $('.sidenav').sidenav();
+        $('.slider').slider({
+                height:550,
+            });
     })
 </script>
 </html>
