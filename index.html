@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe.com</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.css">
+    <style>
+        .slider .indicators .indicator-item.active {background-color: #e65100;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -41,10 +46,79 @@
     </header>
     <main>
         <!-- home -->
+        <div class="container" id="about">
+            <section>
+                <h2 class="orange-text text-darken-4">Hello There, foodies</h2>
+                <p>You smart, you loyal, you a genius. You see the hedges, how Igot it shaped up? It's important to shape up your hedges. It's like getting a haircut, stay fresh. I'm giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. In life there will be roadblocks, but we will overcome it. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, getvrid of it, major key.</p>
+                <hr>
+            </section>
+            <!-- Cakes -->
+            <div class="row">
+                <section>
+                    <div class="col s12 l4">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header white-text orange darken-4">
+                                    <i class="material-icons">label</i>
+                                    CAKE!
+                                </div>
+                                <div class="collapsible-body">
+                                    <img class="responsive-img" src="img/sponge_cake.webp" alt="">
+                                    <span>Im giving you cloth talk,cloth. Special cloth alert cut from a special cloth. It's on you how you want to live your life</span>
+                                    <br> <br>
+                                    <a class="orange darken-4 btn-small" href="">ALL CAKE RECIPES</a>
+                                </div>    
+                            </li>   
+                        </ul> 
+                    </div>    
+                </section>
+                    <!-- soups -->
+                <section>
+                    <div class="col s12 l4">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header white-text orange darken-4">
+                                    <i class="material-icons">label</i>
+                                    SOUP!
+                                </div>
+                                <div class="collapsible-body">
+                                    <img class="responsive-img" src="img/mexican_soup.webp" alt="">
+                                    <span>Im giving you cloth talk,cloth. Special cloth alert cut from a special cloth. It's on you how you want to live your life</span>
+                                    <br> <br>
+                                    <a class="orange darken-4 btn-small" href="">ALL SOUP RECIPES</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                    <!-- chicken -->
+                <section>
+                    <div class="col s12 l4">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header white-text orange darken-4">
+                                    <i class="material-icons">label</i>
+                                    CHICKEN!
+                                </div>
+                                <div class="collapsible-body">
+                                    <img class="responsive-img" src="img/chicken_8.webp" alt="">
+                                    <span>Im giving you cloth talk,cloth. Special cloth alert cut from a special cloth. It's on you how you want to live your life</span>
+                                    <br> <br>
+                                    <a class="orange darken-4 btn-small" href="">ALL CHICKEN RECIPES</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <br>
         <!-- Customer comments -->
-        <!-- Cakes -->
-        <!-- soups -->
-        <!-- chicken -->
+        <section>
+            <div class="container">
+                <h2 class="orange-text text-darken-4 center-align">What our Customer say....</h2 >
+            </div>
+        </section>
     </main>
     <!-- footer -->
     <footer></footer>    
@@ -57,6 +131,7 @@
         $('.slider').slider({
                 height:550,
             });
+        $('.collapsible').collapsible();
     })
 </script>
 </html>
