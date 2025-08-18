@@ -14,27 +14,29 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="white">
-            <div class="container">
-                <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
-                <a class=" sidenav-trigger orange-text text-darken-4 right" href="#mobile">Menu</a>
-                <ul class="right hide-on-small-only">
-                    <li><a class="orange-text text-darken-4" href=""><strong>Home</strong></a></li>
-                    <li><a class="orange-text text-darken-4" href=""><strong>Cakes</strong></a></li>
-                    <li><a class="orange-text text-darken-4" href=""><strong>Soup</strong></a></li>
-                    <li><a class="orange-text text-darken-4" href=""><strong>Chicken</strong></a></li>
-                    <li><a class="orange-text text-darken-4" href=""><strong>Customers</strong></a></li>
+        <div class="navbar-fixed">
+            <nav class="white">
+                <div class="container">
+                    <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
+                    <a class=" sidenav-trigger orange-text text-darken-4 right" href="#mobile">Menu</a>
+                    <ul class="right hide-on-small-only">
+                        <li><a class="orange-text text-darken-4" href="#home"><strong>Home</strong></a></li>
+                        <li><a class="orange-text text-darken-4" href="#cakes"><strong>Cakes</strong></a></li>
+                        <li><a class="orange-text text-darken-4" href="#soup"><strong>Soups</strong></a></li>
+                        <li><a class="orange-text text-darken-4" href="#chicken"><strong>Chicken</strong></a></li>
+                        <li><a class="orange-text text-darken-4" href="#customers"><strong>Customers</strong></a></li>
+                    </ul>
+                </div>
+                <ul id="mobile" class="sidenav orange darken-4">
+                    <li><a class="white-text text-darken-4" href="#home"><strong>Home</strong></a></li>
+                    <li><a class="white-text text-darken-4" href="#cakes"><strong>Cakes</strong></a></li>
+                    <li><a class="white-text text-darken-4" href="#soup"><strong>Soups</strong></a></li>
+                    <li><a class="white-text text-darken-4" href="#chicken"><strong>Chicken</strong></a></li>
+                    <li><a class="white-text text-darken-4" href="#customers"><strong>Customers</strong></a></li>
                 </ul>
-            </div>
-            <ul id="mobile" class="sidenav orange darken-4">
-                <li><a class="white-text text-darken-4" href=""><strong>Home</strong></a></li>
-                <li><a class="white-text text-darken-4" href=""><strong>Cakes</strong></a></li>
-                <li><a class="white-text text-darken-4" href=""><strong>Soup</strong></a></li>
-                <li><a class="white-text text-darken-4" href=""><strong>Chicken</strong></a></li>
-                <li><a class="white-text text-darken-4" href=""><strong>Customers</strong></a></li>
-            </ul>
-        </nav>
-        <div class="slider">
+            </nav>
+        </div>
+        <div id="home" class="slider">
             <ul class="slides">
                 <li><img class="responsive-img" src="img/cake_fruit.jpg" alt=""></li>
                 <li><img class="responsive-img" src="img/shrimp_soup.jpg" alt=""></li>
@@ -117,7 +119,7 @@
         <!-- Customer comments -->
         <section>
             <div class="container">
-                <h2 class="orange-text text-darken-4 center-align">What our Customer say....</h2>
+                <h2 id="customers" class="orange-text text-darken-4 center-align">What our Customer say....</h2>
                 <ul class="collection">
                     <li class="collection-item avatar">
                         <i class="material-icons orange darken-4 circle ">account_circle</i>
@@ -164,10 +166,14 @@
             </div>
         </section>
         <!-- cakes -->
+            <div class="parallax-container">
+                <div class="parallax">
+                    <img class="responsive-img" src="img/cake.jpg" alt="">
+                </div>
+            </div>
         <section>
-            <img class="responsive-img" src="img/cake.jpg" alt="">
             <div class="container">
-                <h1 class="orange-text text-darken-4">Cakes</h1>
+                <h1 id="cakes" class="orange-text text-darken-4">Cakes</h1>
                 <strong><p>The other day the grass was brown, now it's green because I ain't give up. Never surrender. The key is to enjoy life, because they don't want you to enjoy life. I promise you, they don't want you to jetski, they don't want you to smile. Congratulations, you played yourself.</p></strong>
                 <div class="row">
                     
@@ -309,11 +315,15 @@
                 </div>
             </div>
         </section>
-        <img class="" width="100%" height="600px" src="img/soup.jpg" alt="">
+        <div class="parallax-container">
+            <div class="parallax">
+                <img class="" width="100%" height="600px" src="img/soup.jpg" alt="">
+            </div>
+        </div>
         <!-- soups -->
         <section>
             <div class="container">
-                <h1 class="orange-text text-darken-4">Soup</h1>
+                <h1 id="soup" class="orange-text text-darken-4">Soups</h1>
                 <strong><p>When you believe, you will succeed. The first of the month is coming, we have to get money wehave no choice. it cost money to eat and they dont want you to eat. Souround yourself with angels, positive energy, beautiful people, beautiful souls, and a clean heart.</p></strong>
                 <div class="row">
                     <div class="col s12 m6 l4">
@@ -455,10 +465,14 @@
             </div>
         </section>
         <!-- chicken -->
+        <div class="parallax-container">
+            <div class="parallax">
+                <img class="" width="100%" height="600px" src="img/chicken.jpg" alt="">
+            </div>
+        </div>
         <section>
-            <img class="" width="100%" height="600px" src="img/chicken.jpg" alt="">
             <div class="container">
-                <h1 class="orange-text text-darken-4">Chicken</h1>
+                <h1 id="chicken" class="orange-text text-darken-4">Chicken</h1>
                 <strong><p>The key to more success is to have a lot of pillows. We the best. The ladies always say khaled you smell good, I use no cologne, Cocoa butter is the key. im giving you cloth talk, cloth, Special cloth alert, cut from a special cloth.
                 <div class="row">
                     <div class="col s12 m6 l4">
@@ -601,33 +615,32 @@
         </section>
     </main>
     <!-- footer -->
-    <footer class="black">
+    <footer  class="black page-footer">
             <div class="container">
-                <br>
-                <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
-                <h4 class="right orange-text text-darken-4">Quick Links</h4>  
-                <br>
-                <div class="right white-text">
-                    <p>Back to top</p>
-                    <p>Cakes</p>
-                    <p>Soups</p>
-                    <p>Chicken</p>
-                    <p>Customers</p>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
+                        <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi animi quae et! Nostrum, perferendis?  Illum odio dicta soluta cumque  voluptatem.</p>
+                    </div>
+                    <div class="col s12 m6 l4"></div>
+                    <div class="col s12 m6 l4">
+                        <h4 class="orange-text text-darken-4">Quick Links</h4>  
+                        <ul>
+                            <li> <a class="white-text" href="#home">Back to top</a></li>
+                            <li> <a class="white-text" href="#cakes">Cakes</a></li>
+                            <li> <a class="white-text" href="#soup">Soups</a></li>
+                            <li> <a class="white-text" href="#chicken">Chicken</a></li>
+                            <li> <a class="white-text" href="#customers">Customers</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="white-text">
-                    <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Nisi animi quae et! Nostrum, <br> perferendis?  Illum odio dicta soluta cumque <br> voluptatem.</p>
+            </div>    
+                <div class=" footer-copyright orange darken-4" >
+                    <div class="container">
+                        <p class=" center-align">&copy; 2025 Recipe.com | Chibuike-Godson</p>
+                    </div>
                 </div>
-            </div>
-            <br> <br> <br> <br>
-            <section class="orange darken-4">
-                <br>
-                <div class="container center-align white-text">
-                    <p>&copy; 2025 Recipe.com | CORE-TECH</p>
-                </div>
-                <br>
-            </section>
     </footer>    
-    <br>
 <script src="js/jquery.js"></script>
 <script src="js/materialize.js"></script>
 <script>
@@ -637,6 +650,7 @@
                 height:550,
             });
         $('.collapsible').collapsible();
+        $('.parallax').parallax();
     })
 </script>
 </html>
