@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new recipe</title>
+        <link rel="stylesheet" href="css/materialize.css">
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="white">
+            <div class="container">
+                <a href=""><img class="responsive-img" width="150px" src="img/logo.png" alt="logo"></a>
+                <a class=" sidenav-trigger orange-text text-darken-4 right" href="#mobile">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-small-only">
+                    <li><a class="orange-text text-darken-4" href="index.html"><strong>Who we are</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href="cakes.html"><strong>Find a recipe</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href="soup.html"><strong>Meet the experts</strong></a></li>
+                    <li><a class="orange-text text-darken-4" href="chicken.html"><strong>Client</strong></a></li>
+                    <a class="btn-small orange darken-4 " href="soup.html">Login</a>
+                </ul>
+            </div>
+            <ul id="mobile" class="sidenav orange darken-4">
+                <li><a class="white-text text-darken-4" href="index.html"><strong>Home</strong></a></li>
+                <li><a class="white-text text-darken-4" href="cakes.html"><strong>Cakes</strong></a></li>
+                <li><a class="white-text text-darken-4" href="soup.html"><strong>Soups</strong></a></li>
+                <li><a class="white-text text-darken-4" href="chicken.html"><strong>Chicken</strong></a></li>
+                <li><a class="white-text text-darken-4" href="#customers"><strong>Customers</strong></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img class="responsive-img " src="img/chicken.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h4 class="center orange-text text-darken-4">Add a New recipe</h4>
+        <div class="row">
+            <div class="col s12 m6 l10 input-field">
+                <input type="text" placeholder="Recipe Name">
+            </div>
+            <div class="col s12 m6 l2 input-field">
+                <select name=""  id="">
+                    <option value="">Cakes</option>
+                    <option value="">Chicken</option>
+                    <option value="">Soup</option>
+                </select>
+                <label for=""> Recipe Type</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l12 input-field">
+                <input type="text" placeholder="Description">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l10 input-field">
+                <input type="text" placeholder="Ingredients">
+            </div>
+            <div class="col s12 m6 l2 input-field">
+                <input type="text" placeholder="Duration">
+            </div>
+        </div>
+        <div class="input-field center">
+            <a class="btn-large orange darken-4 " href="soup.html">SUBMIT</a>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/materialize.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.slider').slider({
+            indicators:false,
+            height:300
+        });
+        $('.collapsible').collapsible();
+        $('.parallax').parallax({
+        });
+        $('select').formSelect();
+        $('.materialboxed').materialbox();
+        
+    })
+</script>
+</html>
