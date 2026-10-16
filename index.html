@@ -146,6 +146,28 @@
                 </div>
             </div>
         </section>
+        
+<!-- Recipe Search -->
+<div class="container">
+    <h4 class="orange-text text-darken-4 center-align">
+        Find Your Recipe
+    </h4>
+
+    <p class="center-align">
+        Search for your favourite chicken, soup or cake recipe.
+    </p>
+
+    <div class="input-field">
+        <i class="material-icons prefix orange-text text-darken-4">
+            search
+        </i>
+        <input type="text" id="recipeSearch"
+        placeholder="Search recipes...">
+    </div>
+
+    <p id="searchMessage" class="center-align orange-text text-darken-4"></p>
+</div>
+
         <!-- cakes -->
             <div class="parallax-container hide-on-med-and-down">
                 <div class="parallax">
@@ -510,6 +532,36 @@
         $('.parallax').parallax();
         $('.materialboxed').materialbox();
         $('.modal').modal();
+        
+$('#recipeSearch').on('input', function() {
+    var searchText = $(this).val().toLowerCase();
+    var found = 0;
+
+    $('.card').each(function() {
+        var recipeName = $(this)
+            .find('.card-content')
+            .text()
+            .toLowerCase();
+
+        if (recipeName.includes(searchText)) {
+            $(this).closest('.col').show();
+            found++;
+        } else {
+            $(this).closest('.col').hide();
+        }
+    });
+
+    if (searchText === '') {
+        $('#searchMessage').text('');
+    } else if (found === 0) {
+        $('#searchMessage').text('No recipes found.');
+    } else {
+        $('#searchMessage').text(
+            found + ' recipe(s) found.'
+        );
+    }
+});
+
         
     })
 </script>

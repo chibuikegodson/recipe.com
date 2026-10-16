@@ -55,6 +55,12 @@
                     <div class="card-img">
                         <img class="responsive-img materialboxed" src="img/chicken_5.webp" alt="">
                     </div>
+                    <div class="card-panel orange lighten-5">
+                        <h5 class="orange-text text-darken-4">
+                            Favourite Chicken Recipes
+                        </h5>
+                        <ul id="favouriteList"></ul>
+                    </div>
                     <div class="card-content ">
                         <strong><span class="orange-text text-darken-4">Oregano wings
                         <p>In life there will be road blocks but we will over come it
@@ -226,6 +232,19 @@
         $('.parallax').parallax();
         
         $('.materialboxed').materialbox();
+        function displayFavourites() {
+            var list = $('#favouriteList');
+            list.empty();
+
+            if (favourites.length === 0) {
+                list.append('<li>No favourite recipes saved yet.</li>');
+            } else {
+                favourites.forEach(function(name) {
+                    list.append($('<li>').text('♥ ' + name));
+                });
+            }
+        }
+        displayFavourites();
         
     })
 </script>

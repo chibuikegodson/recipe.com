@@ -8,6 +8,27 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
         html{ font-family: "Josefin Sans", sans-serif;}
+        .cake-rating {
+            margin-top: 10px;
+        }
+
+        .cake-rating .star {
+            background: none;
+            border: none;
+            font-size: 25px;
+            color: #bbb;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        .cake-rating .star.selected {
+            color: #ff9800;
+        }
+
+        .rating-message {
+            color: #e65100;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +79,15 @@
                     <div class="card-content ">
                         <strong><span class="orange-text text-darken-4">Sponge Cake</span></strong>
                         <p>When you get out the shower always dry your back</p>
+                        <div class="cake-rating" data-recipe="Sponge Cake">
+                            <p>Rate this recipe:</p>
+                            <button type="button" class="star" data-value="1">★</button>
+                            <button type="button" class="star" data-value="2">★</button>
+                            <button type="button" class="star" data-value="3">★</button>
+                            <button type="button" class="star" data-value="4">★</button>
+                            <button type="button" class="star" data-value="5">★</button>
+                        <p class="rating-message">Select a rating</p>
+                    </div>
                     </div>
                     <div class="card-action">
                         <a class="orange-text text-darken-4" href="">INGREDIENTS</a>
@@ -225,7 +255,45 @@
         });
         
         $('.materialboxed').materialbox();
-        
+        $('.cake-rating').each(function() {
+            var box = $(this);
+            var recipe = box.data('recipe');
+            var savedRating = localStorage.getItem('cakeRating_' + recipe);
+
+            if (savedRating) {
+                updateStars(box, savedRating);
+                box.find('.rating-message').text(
+                    'Your rating: ' + savedRating + '/5'
+                );
+            }
+        });
+
+        $('.cake-rating .star').on('click', function() {
+            var box = $(this).closest('.cake-rating');
+            var rating = $(this).data('value');
+            var recipe = box.data('recipe');
+
+            localStorage.setItem('cakeRating_' + recipe, rating);
+
+            updateStars(box, rating);
+
+            box.find('.rating-message').text(
+                'Your rating: ' + rating + '/5'
+            );
+        });
+
+        function updateStars(box, rating) {
+            box.find('.star').each(function() {
+                var value = $(this).data('value');
+
+                if (value <= rating) {
+                    $(this).addClass('selected');
+                } else {
+                    $(this).removeClass('selected');
+                }
+            });
+        }
+                
     })
 </script>
 </html>
